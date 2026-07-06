@@ -1,0 +1,67 @@
+#When the game starts, it welcomes you and gives you a choice between two doors: one red and one blue.
+#If you choose the blue door, you lose. If you choose the red one, you are presented with three chests: white, black, and green.
+#The green one is full of snakes, and the black one is full of poisonous spiders both lead to a loss while the white one holds the treasure.
+print("""
+ @@@@@                                        @@@@@
+@@@@@@@                                      @@@@@@@
+@@@@@@@           @@@@@@@@@@@@@@@            @@@@@@@
+ @@@@@@@@       @@@@@@@@@@@@@@@@@@@        @@@@@@@@
+     @@@@@     @@@@@@@@@@@@@@@@@@@@@     @@@@@
+       @@@@@  @@@@@@@@@@@@@@@@@@@@@@@  @@@@@
+         @@  @@@@@@@@@@@@@@@@@@@@@@@@@  @@
+            @@@@@@@    @@@@@@    @@@@@@
+            @@@@@@      @@@@      @@@@@
+            @@@@@@      @@@@      @@@@@
+             @@@@@@    @@@@@@    @@@@@
+              @@@@@@@@@@@  @@@@@@@@@@
+               @@@@@@@@@@  @@@@@@@@@
+           @@   @@@@@@@@@@@@@@@@@   @@
+           @@@@  @@@@ @ @ @ @ @@@@  @@@@
+          @@@@@   @@@ @ @ @ @ @@@   @@@@@
+        @@@@@      @@@@@@@@@@@@@      @@@@@
+      @@@@          @@@@@@@@@@@          @@@@
+   @@@@@              @@@@@@@              @@@@@
+  @@@@@@@                                 @@@@@@@
+   @@@@@                                   @@@@@
+------------------------------------------------
+""")
+Door = input("""Hello in The Worst island in world
+know you have 2 doors you must choose one of them 
+(Red Door)   ,   (Blue Door) 
+""")
+R="Y" 
+Right_gift = "white"
+right_door = "red door"
+
+while(R=="Y"):
+ if Door.lower() == right_door:
+ 
+     gift = input(f"""Great! you are choose The Right Door ({Door})
+Now You must choose The Right gift  (White  ,  Black   ,  green): """)
+    
+    
+ 
+     if gift.lower() == Right_gift:
+        print("congratulation , You Find The Treasur  ")
+     
+     elif gift.lower() == "black":
+        print ("Boom You are dead whit alot of Venomous Spidrs")
+ 
+     elif gift.lower() == "green":
+        print ("Boom You are dead whit alot of Venomous Snaks")
+        
+     else :
+         print(f"your choose {gift} is not understnad")
+    
+ elif Door == "Blue Door".lower():
+     print("""Your choose is to much bad 
+     You dead!!
+     """)
+ else:
+   print(f"Your choose{Door} is not understand ; Try again")
+
+ R = input("\nYou Want To Play Again? (Y , N)").upper()
+
+ if R=="Y":
+  Door = input("Enter The color Of door (Red Door)   ,   (Blue Door)")
+ 
