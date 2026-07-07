@@ -1,0 +1,42 @@
+print("\t\t*****Welcome in ishop Calculator*****\n\n")
+Basket = []
+PriceBasket = []
+try:
+    Num = int(input("How Many items are there in your Basket today? : "))
+except ValueError:
+    print("That's not a number, run the program again and enter digits only.")
+    exit()
+
+if Num > 0:
+ print("\nLet's get to counting them ....")
+ for x in range(Num) :
+     
+     Basket.append(input(f"please tell me the name of the item number {x+1} : ").capitalize()) 
+     PriceBasket.append(float(input(f"What is the price Of {Basket[x]} : $")))
+     print()
+   
+ 
+ 
+ A =input("Would you want to see your entire basket items? (Y , N)").capitalize()
+ if A == "Y":
+     print(f"Your Basket is : {Basket}")
+     A = input("\nWould you want to see your entire Prices of your basket items? (Y , N) ").capitalize()
+ 
+     if A == "Y":
+         print("Your Prices of your basket is : " , sum(PriceBasket) ) 
+ 
+     elif A == "N" : 
+         print("Thank you for using My APP :) ")
+ 
+     else:
+      print(f"You Pressed Another Thing ({A}) So .. Nice to see you")
+ 
+ elif A == "N": 
+   print("Thank you for using My APP :) ")
+ 
+ else:
+   print(f"You Pressed Another Thing ({A}) So .. Nice to see you")
+elif Num == 0:
+  print("You are here not to buy")
+else :
+  print("Bruhh!!")
