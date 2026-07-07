@@ -1,0 +1,34 @@
+Tasks = input("Enter The Tasks for to day sepatated by a comma : ").split(", ")
+Finshed_Tasks = []
+Not_Finshed_Tasks = []
+
+for C_Tasks in Tasks:
+    A = input(f"\nDid you finsh {C_Tasks} (Y , N)").upper()
+    if A == "Y":
+        print("Nice job man")
+        Finshed_Tasks.append(C_Tasks)
+    
+    elif A == "N":
+        print(f"\nTry Finish {C_Tasks}")
+        Not_Finshed_Tasks.append(C_Tasks)
+
+    else:
+        while A not in ("Y" , "N"):
+            A = input(f"\nYou Must Enter (Y or N) you But ({A}) this not allawd Try again : ").upper()
+            if A == "Y":
+             print("Nice job man")
+             Finshed_Tasks.append(C_Tasks)
+ 
+            elif A == "N":
+             print(f"\nTry Finish {C_Tasks}")
+             Not_Finshed_Tasks.append(C_Tasks)
+
+            if A in ("Y" , "N") : break
+
+
+A = input("\n\ndo you want to see your today's progress? (Y , N)").upper()
+
+if A == "Y":
+    print("\n***** Done Tasks *****\n"    , Finshed_Tasks)
+    print("\n***** Ongoing Tasks *****\n" , Not_Finshed_Tasks)
+   
