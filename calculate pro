@@ -1,0 +1,147 @@
+#calculate 
+
+
+
+def get_numbers():
+    while True:
+        try:
+            num1 = float(input("Enter first number: "))
+            num2 = float(input("Enter second number: "))
+            return num1, num2
+        except ValueError:
+            print("Invalid input! Please enter numbers only.\n")
+        except Exception as e:
+            print(f"Unexpected error: {e}\n")
+
+def addition(a, b):
+    result = a + b
+    print(result)
+    return result
+def subtraction(a, b):
+    result = a - b
+    print(result)
+    return result
+def multiplication(a, b):
+    result = a * b
+    print(result)
+    return result
+def power(a, b):
+    result = a ** b
+    print(result)
+    return result
+def division(a, b):
+    
+    try:
+        result = a / b
+        print(result)
+        return result
+    except ZeroDivisionError:
+        print("Cannot divide by zero!")
+        return "divide by zero!"
+    except Exception as e:
+        print(f"Unexpected error: {e}")
+        return "Error"
+def percentage(a, b):
+    result = (a * b) / 100
+    print("Result:", result)
+    return result
+
+history = []
+
+print("""
+            ========================
+                  Calculator Pro
+            ========================""")
+user_want = 'Y'
+while user_want == 'Y':
+   try:
+       user_want = int(input("""
+   
+   
+   1. Addition                      4. Division
+
+   2. Subtraction                   5. Power
+
+   3. Multiplication                6. percentage
+
+   7. History                       8. Exit
+   
+   Choose an option:"""))
+   except :
+    print("wrong value , try whit number")
+    continue
+       
+   if user_want == 1:
+      (num1 , num2 ) = get_numbers()
+      result = addition(num1, num2)
+      history.append({
+       "num1": num1 ,
+       "op": "+",
+       "num2": num2,
+       "result": result
+   })
+      
+   if user_want == 2:
+      (num1 , num2 ) = get_numbers()
+      result = subtraction(num1, num2)
+      history.append({
+       "num1": num1 ,
+       "op": "-",
+       "num2": num2,
+       "result": result
+   })
+
+   if user_want == 3:
+      (num1 , num2 ) = get_numbers()
+      result = multiplication(num1, num2)
+      history.append({
+       "num1": num1 ,
+       "op": "*",
+       "num2": num2,
+       "result": result
+   })
+
+   if user_want == 4:
+      (num1 , num2 ) = get_numbers()
+      result = division(num1, num2)
+      history.append({
+       "num1": num1 ,
+       "op": "/",
+       "num2": num2,
+       "result": result
+   })
+
+   if user_want == 5:
+      (num1 , num2 ) = get_numbers()
+      result = power(num1, num2)
+      history.append({
+       "num1": num1 ,
+       "op": "**",
+       "num2": num2,
+       "result": result
+   })
+      
+   if user_want == 6:
+      (num1 , num2 ) = get_numbers()
+      result = percentage(num1, num2)
+      history.append({
+       "num1": num1 ,
+       "op": "%",
+       "num2": num2,
+       "result": result
+   })
+
+   if user_want == 7:   
+        print("\nthe all history is :")
+        
+        if not history:
+            print("empty Bro")
+            
+        else:
+            for n in range(len(history)):
+                print(f"{n+1}.   {history[n]['num1']} {history[n]['op']} {history[n]['num2']} = {history[n]['result']}")
+   if user_want == 8:
+      print("Thank you for using Calculator Pro. Program terminated successfully. Goodbye! 👋")
+      break
+
+   user_want = input("Do you want to use the calculator again? (Y , N)").upper() 
