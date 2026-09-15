@@ -138,8 +138,8 @@ while user_want == 'Y':
                 print(f"{n+1}.   {history[n]['num1']} {history[n]['op']} {history[n]['num2']} = {history[n]['result']}")
 
    if user_want == 8:
-      print("Thank you for using Calculator Pro. Program terminated successfully. Goodbye! 👋")
+      print("Thank you for using Calculator Pro. Program terminated successfully. Goodbye!")
       break
 
    user_want = input("Do you want to use the calculator again? (Y , N)").upper() 
-print("Thank you for using Calculator Pro. Program terminated successfully. Goodbye! 👋")
+print("Thank you for using Calculator Pro. Program terminated successfully. Goodbye!")
