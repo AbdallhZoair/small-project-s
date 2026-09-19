@@ -1,4 +1,4 @@
-Tasks = input("Enter The Tasks for to day sepatated by a comma : ").split(", ")
+Tasks = input("Enter The Tasks for to day sepatated by a comma: ").split(", ")
 Finshed_Tasks = []
 Not_Finshed_Tasks = []
 
