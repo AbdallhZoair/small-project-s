@@ -26,7 +26,7 @@ for C_Tasks in Tasks:
             if A in ("Y" , "N") : break
 
 
-A = input( "\n\ndo you want to see your today's progress? (Y , N)").upper()
+A = input("\n\ndo you want to see your today's progress? (Y , N)").upper()
 
 if A == "Y":
     print("\n***** Done Tasks *****\n"    , Finshed_Tasks)
